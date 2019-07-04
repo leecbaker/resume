@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: "Computer Modern";
+            max-width: 6.5in;
+            font-size: 11pt;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="text-center">
+        <h1>Lee C. Baker</h1>
+        <div>1321 Upland Drive #6851 &bull; Houston, TX 77043 &bull; +1-505-480-2209 &bull; <a
+                href="mailto:lee@leecbaker.com">lee@leecbaker.com</a></div>
+    </div>
+
+    <hr>
+
+    <h3>Objective</h3>
+    <p>
+        A productive career at a competitive company where talented people work with cutting-edge technology to deliver
+        useful products and innovative solutions.
+    </p>
+
+    <h3>Relevant Achievements</h3>
+
+    <ul>
+        {% for achievement in data.relevant_achievements %}
+        <li>{{achievement}}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Core Technical Skills</h3>
+    <p><b>Electronics Engineering:</b> Embedded systems, microcontrollers / DSP, circuit design and debug, RF systems
+    </p>
+
+    <p><b>Programming:</b> Data mining, scientific computing, compiler design, algorithm parallelization, performance
+        optimization</p>
+
+    <p><b>Software Engineering:</b> Application development (Mac / Windows / Linux), UI design</p>
+
+    <h3>Education</h3>
+    <div>
+        <b style="float:left;">Bachelor of Science in Computer Science<br />Bachelor of Science in Electrical Engineering</b>
+        <span style="float:right;">New Mexico Tech</span>
+        <div style="clear:both;"></div>
+        <span style="float:left;">Graduated December 2007 with Honors</span>
+        <span style="float:right"><i>Socorro, NM</i></span>
+        <div style="clear:both;"></div>
+    </div>
+
+    <h3>Professional Experience</h3>
+
+    {% for job in data.jobs %}
+    <div class="job">
+        <div class="jobhead"><b style="float:left;">{{job.title}}</b><a style="float:right;" href="{{job.org_url}}">{{job.org}}</a> <div style="clear:both;"></div></div>
+
+        <div class="jobhead"><span style="float:left;">{{job.date}}</span><span style="float:right;"><i>{{job.location}}</i></span> <div style="clear:both;"></div></div>
+        <ul>
+            {% for detail in job.details %}
+                <li>{{detail}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+
+    <h3>Programming Skills</h3>
+
+    {% for category in data.programming_skills %}
+    <div><b>{{category.name}}: </b> {{category.content}}</div>
+    {% endfor %}
+
+    <h3>Engineering Skills</h3>
+    {% for category in data.engineering_skills %}
+    <div><b>{{category.name}}: </b> {{category.content}}</div>
+    {% endfor %}
+
+    <h3>Licenses, memberships and awards</h3>
+    {% for entry in data.memberships %}
+    <div>{{entry.name}} - {{entry.detail}} </b> {% if entry.org_url %}<a href="{{entry.org_url}}">{{entry.org}}</a>{% else %}{{entry.org}}{% endif %}</div>
+    {% endfor %}
+
+    <hr>
+
+    <div class="text-center">
+        References available on request.
+    </div>
+
+
+</body>
+
+</html>

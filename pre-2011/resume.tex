@@ -1,0 +1,293 @@
+\documentclass[10pt,margin=1in]{article}
+\usepackage{graphicx}    % needed for including graphics e.g. EPS, PS
+
+\usepackage{tgpagella}
+
+
+\usepackage{url}    %base package for URL support
+\urlstyle{rm}    %URLs in times roman instead of courier
+%links in pdf clickable: hyperref package
+\usepackage[
+      pdftex,    %put here the correct(!) driver you are using 
+      colorlinks=true,    %no frame around URL
+      urlcolor=black,    %no colors
+      menucolor=black,    %no colors
+      linkcolor=black,    %no colors
+      bookmarks=true,    %tree-like TOC
+      bookmarksopen=true,    %expanded when starting
+      hyperfootnotes=false,    %no referencing of footnotes, does not compile
+      pdfpagemode=UseOutlines    %show the bookmarks when starting the pdf viewer
+]{hyperref}
+
+\newenvironment{mylist}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}}{\end{itemize}
+}
+
+\usepackage[usenames,dvipsnames]{color}
+\definecolor{mygrey}{gray}{.85}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+
+\usepackage{titlesec}
+\usepackage{verbatim}
+
+\renewcommand{\labelitemi}{\textendash}
+
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{9.2in}
+\setlength{\oddsidemargin}{-.25in}
+\setlength{\textwidth}{6.5in}
+\parindent 0pt		  % sets leading space for paragraphs
+\parskip 1.2pt           % sets spacing between paragraphs
+\setcounter{secnumdepth}{0}
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Lee C. Baker}}
+\begin{comment}
+2775 N. Roadrunner Parkway \#302\ \ \textbullet
+\ \ Christchurch, New Zealand
+\end{comment}
+\\
++1-505-480-2209\ \ \textbullet
+\ \ \href{mailto:lee@leecbaker.com}{lee@leecbaker.com}
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+
+\titlespacing {\section}{0in}{1.2em}{0in}[0in]
+\hyphenpenalty=5000
+\tolerance=1000
+
+\begin{comment}
+\resheading{Objective}
+\label{obj}
+A productive career at a competitive company where talented people work with cutting-edge technology to deliver useful products and innovative solutions.
+\end{comment}
+ 
+\subsection{Relevant Achievements}
+\label{exp}
+
+\begin{mylist}
+\begin{comment}
+\item
+Designed, implemented and tested an 8 channel digiitzer system for a wideband phased array. 180 MSPS x 8 channel capture capability provided full bandwidth data (2.9 GB/sec) to a high performance processing PC. Implemented multi-threaded data capture and processing software in C to perform signal detection and geolocation.
+\end{comment}
+\item 
+Created, tested, and deployed Windows-based control software and user interface for a complex tactical RF sensor system, including MySQL data storage back-end, Java operator interface, and multi-threaded real-time data processing module in C.
+
+\item Wrote linux-based data mining tools to extract information from the topology and structure of complex networks.
+
+\item Implemented a C compiler, including parser, AST generation, optimizer, and x86 code emission.
+
+\item
+Designed, realized and optimized embedded DSP/control application in an proof-of-concept sensing system. Maximized system availability and maintainability by providing a complete set of system self diagnostics. Optimized system performance to exceed customer requirements, leading to success and expansion of initial contract.
+
+\item
+Designed and implemented Windows-based control software and FPGA hardware command interface to directly control functions of concurrently designed RF circuit boards. 
+Successfully designed and implemented a custom serial control protocol over USB enable out-of-band troubleshooting, testing and calibration of RF synthesizer and reciever modules.
+
+\item Developed software for a Xilinx microcontroller/FPGA device to communicate simultaneously with 32 aircraft gyroscope modules and interface with a networked desktop computer for testing and calibration purposes.
+
+\item Designed and implemented a high speed analog data acquisition system as a PC104 expansion card, including FPGA programming, PCB layout, and Linux driver programming. 
+
+\item Implemented software for autonomous mobile coordinated robotics system to locate an object within a search area. 
+\begin {comment}
+
+\item Designed, analyzed and constructed Ku-band polarization steerable feed for airborne high power satellite communications. 
+\end {comment}
+\end{mylist} 
+
+\subsection{Core Technical Skills}
+\label{core_skills}
+
+\textbf{Electronics Engineering:} Embedded systems, microcontrollers / DSP, circuit design and debug, RF systems
+
+\textbf{Programming}: Data mining, scientific computing, compiler design, algorithm parallelization, performance optimization
+
+\textbf{Software Engineering:} Application development (Mac / Windows / Linux), UI design
+
+\subsection{Education}
+\label{edu}
+\textbf{Bachelor of Science in Computer Science} \hfill \href{http://www.nmt.edu}{New Mexico Tech}
+
+\textbf{Bachelor of Science in Electrical Engineering}
+
+Graduated December 2007 with Honors \hfill \textit{Socorro, New Mexico, USA}
+
+\subsection{Professional Experience}
+\label{prof_exp}
+
+\textbf{Design Engineer} \hfill \href{http://www.invertix.com}{Invertix Corporation}
+
+January 2008 to May, 2011\hfill \textit{Las Cruces, New Mexico, USA}
+
+\begin{mylist}
+\item Designed and implemented user-facing software for control of custom hardware elements, integrating user input to increase usability and efficiency of user interfaces
+\item Designed, developed and integrated embedded control/DSP software
+\item Debugged and integrated multiple interconnected software and hardware elements to increase uptime, reliability and performance of a complex system
+\item Received Invertix 2008 Eagle Award for Innovation in recognition of work that contributed to the success of a critical project
+\item Assist with bench debug of RF synthesizers and receivers
+\item Evaluated capabilities and technologies before making purchasing and design recommendations for system hardware
+\end{mylist}
+
+\pagebreak
+
+\subsection{Professional Experience (continued)}
+
+\textbf{Embedded Systems Engineering Intern} \hfill \href{http://www.aptec.com/}{Applied Technology Associates}
+
+May -- August 2007 \hfill \textit{Albuquerque, New Mexico, USA}
+ 
+\begin{mylist}
+\item Developed calibration and measurement software for embedded applications
+\item Performed bench integration of custom FPGA/DSP software with custom measurement hardware
+\item Developed and tested software and hardware for a variety of measurement and sensing applications
+\item Worked with other engineers to design and implement software to run on concurrently developed hardware
+\end{mylist}
+ 
+\medskip
+\textbf{Research Associate}  \hfill \href{http://www.icasa.nmt.edu/}{New Mexico Tech Institute for Complex Additive Systems Analysis}
+
+May 2006 -- January 2007 \hfill \textit{Socorro, New Mexico, USA}
+
+\begin{mylist}
+\item Performed analysis on complex networks to discover significant relationships and identify key features
+\item Implemented graph/network analysis tools and metrics
+\item Developed user interfaces for data mining tools using C/C++, Java, PHP and Perl
+\end{mylist}
+ 
+\begin {comment}
+ 
+\medskip
+\textbf{Resident Assistant} \hfill \href{http://externalweb.nmt.edu/reslife/}{New Mexico Tech Residential Life}
+
+August 2004 -- May 2005; August 2005 - May 2006 \hfill \textit{Socorro, New Mexico, USA}
+ 
+\begin{mylist}
+\item Organized activities and programs to build and maintain a sense of community
+\item Enforced residence hall regulations for approximately 25 students
+\end{mylist}
+
+\medskip
+\textbf{Computer Support Associate} \hfill \href{http://infohost.nmt.edu/tcc/}{New Mexico Tech Computer Center}
+
+May - August 2005 \hfill \textit{Socorro, New Mexico, USA}
+\begin{mylist}
+\item Upgraded, configured, and maintained a 128-processor cluster
+\item Maintained approximately 300 networked Windows/Linux workstations
+\item Made recommendations for upgrades and new hardware for all systems
+\end{mylist}
+ 
+
+\textbf{Conference Resident Assistant}
+2004 - 2005
+ 
+\href{http://externalweb.nmt.edu/conferences/}{New Mexico Tech Conference Services}, Socorro, New Mexico
+ 
+Represented New Mexico Tech while meeting the needs of conference attendees using New Mexico Tech
+facilities.
+ 
+\textbf{User Consultant}
+2004
+
+\href{http://infohost.nmt.edu/~tc/resources/tclab.html}{New Mexico Tech Technical Communications Lab}, \textsl{Socorro, New Mexico}
+ 
+Macromedia, Adobe and other software, as well as assisted users with computer operation and
+opening/closing lab.
+
+Independent Computer Consultant (5/01 -- 8/03)
+ 
+Crane, Texas
+ 
+Installed and repaired personal computers and networks in homes and businesses in the area around Crane, Texas. Diagnosed and repaired software and hardware problems on a variety of operating systems. 
+
+Summer Maintenance/Technology Staff (5/03 - 8/03)
+
+\href{http://craneisd.com/}{Crane ISD Maintenance Dept./ Technology Dept.}
+
+Maintained and improved school buildings and grounds.
+ 
+
+Summer Technology Staff (5/02 -- 8/02)
+\href{http://craneisd.com/}{Crane ISD Technology Dept.}
+
+Maintained teacher/student workstations, including hardware troubleshooting, network hardware
+installation, and support of teachers upon return to school.
+\end {comment}
+
+\subsection{Programming Skills}
+\label{prog}
+
+\textbf{Languages:}
+C/C++, Objective-C, Java, PHP, Python, SQL, various assembly languages
+
+\textbf{APIs/libraries:}
+STL, SC++L, OpenMP, OpenAL, Win32, JFC
+
+\textbf{UI design:} Win32, Swing/AWT, Cocoa, and National Instruments Labwindows/CVI
+
+\textbf{Scientific computation/simulation:}
+OpenMP API, MATLAB, Octave, Numpy/Scipy
+
+\textbf{Web design:}
+HTML, CSS, Javascript, PHP, SQL
+
+\textbf{Compiler design:} scanning, parsing, optimization, instruction selection, and code emission stages
+
+\textbf{Parallel processing:} Win32, OpenMP, and pthreads libraries on Windows and POSIX platforms
+
+\textbf{Development target OS:}
+Linux, Mac OS X, Windows, embedded
+
+\subsection{Engineering Skills}
+\label{engr}
+
+\textbf{Microcontroller/embedded systems:} Motorola HCS12, TI TMS320 DSPs in C / C++ / assembly languages
+
+\textbf{DSP:} Digital filtering, signal detection, control algorithms, radar ranging, RF beamsteering using C, C++, and MATLAB on embedded and PC platforms
+
+\textbf{Lab test equipment:} Oscilloscopes, function generators, signal generators, spectrum analyzers, RF network analyzers
+
+\textbf{FPGA:} VHDL design using Xilinx ISE/EDK and Altera Quartus II targetting MAX7000, Spartan 3 and Virtex 4 devices
+
+\begin{comment}
+\textbf{Circuit design:} design, simulation and board layout using Protel/Altium DXP
+
+\textbf{Microcomputer interfacing:} design and implement FPGA firmware to interface with expansion busses, including PC104/ISA, TI TMS320 DSP EMIF, and Motorola HC12
+\end{comment}
+
+\textbf{RF:} VHF/UHF transmitter and receiver systems; phased arrays, RADAR, MASINT sensors
+
+
+\subsection{Licenses, memberships and awards}
+\begin{comment}
+Active security clearance - details available on request \hfill \emph{US Department of Defense}
+\end{comment}
+
+Certified Engineer Intern - \#6693 \hfill\emph{\href{http://www.sblpes.state.nm.us/}{New Mexico Board of Licensure for Professional Engineers and Surveyors}}
+\begin{comment}
+ \ \ \ \ Expect licensure as a Professional Engineer in December 2011
+\end{comment}
+
+Tourism Forecasting Algorithm competition - first place \hfill \emph{\href{http://www.kaggle.com/tourism1}Kaggle.com}
+
+Invertix Eagle Award for Innovation (2008) \hfill \emph{\href{http://www.invertix.com/}Invertix Corporation}
+
+Licensed Paraglider Pilot - P2 rating \hfill \emph{\href{http://www.ushpa.aero/}{United States Hang Gliding and Paragliding Association}}
+
+Scuba Diver - PADI Advanced Open Water \hfill \emph{\href{http://www.padi.com/}{PADI}}
+
+Amateur Radio Operator - Extra Class AE5VD \hfill \emph{ \href{http://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=3247080}{US Federal Communications Commision}}
+
+\bigskip
+\begin{center}
+References available on request.
+\end{center}
+
+\end{document}
